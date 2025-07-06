@@ -44,8 +44,7 @@ git clone https://github.com/your-username/LiDAV.git
 cd LiDAV
 python3 -m http.server
 ```
-
-## Open http://localhost:8000 in your browser
+ Open http://localhost:8000 in your browser
 
 ## Project Structure
 ```
