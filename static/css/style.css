@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+}
+
+#app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header {
+    padding: 12px 24px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ccc;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Layout container for controls and canvas */
+#main {
+    flex: 1;
+    display: flex;
+    height: calc(100vh - 60px);
+    padding: 16px;               /* ✅ Outer spacing */
+    box-sizing: border-box;      /* Ensures padding doesn't shrink children */
+    gap: 16px;                   /* Adds spacing between control panel and canvas */
+}
+
+/* Controls Panel (Left) */
+#controls-panel {
+    width: 350px;
+    padding: 16px;
+    box-sizing: border-box;
+    border-right: 1px solid #ccc;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+}
+
+#controls-panel input {
+    width: 50px;
+    margin-right: 6px;
+    padding: 4px;
+    font-size: 14px;
+}
+
+#step-info {
+    height: 180px;
+    overflow-y: auto;
+    background: #f7f7f7;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-family: monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Sketch Canvas Holder */
+#sketch-holder {
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* UI Elements */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+select {
+    padding: 6px;
+    font-size: 14px;
+    margin-top: 4px;
+}

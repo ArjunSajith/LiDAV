@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LiDAV – Line Drawing Algorithms Visualizer</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+</head>
+
+<body>
+  <div id="app-container">
+    <!-- Header -->
+    <header>
+      <h1>LiDAV – Line Drawing Algorithms Visualizer</h1>
+    </header>
+
+    <!-- Main Layout -->
+    <div id="main">
+      <!-- Left Controls Panel -->
+      <div id="controls-panel">
+        <!-- Algorithm Selection -->
+        <div>
+          <label for="algorithm"><strong>Select Line Drawing Algorithm:</strong></label><br>
+          <select id="algorithm">
+            <option value="dda">DDA (Digital Differential Analyzer)</option>
+            <option value="bresenham">Bresenham's Algorithm</option>
+          </select>
+        </div>
+
+        <!-- Point Input -->
+        <div>
+          <label>Start Point (x, y):</label><br>
+          <input type="number" id="startX" placeholder="x">
+          <input type="number" id="startY" placeholder="y"><br><br>
+
+          <label>End Point (x, y):</label><br>
+          <input type="number" id="endX" placeholder="x">
+          <input type="number" id="endY" placeholder="y"><br><br>
+
+          <button id="applyPointsBtn">Apply Points</button>
+        </div>
+
+        <!-- Step Info -->
+        <div>
+          <strong>Step Info:</strong>
+          <pre id="step-info"></pre>
+        </div>
+
+        <!-- Next Button -->
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <!-- Canvas Panel -->
+      <div id="sketch-holder"></div>
+    </div>
+  </div>
+
+  <!-- JS scripts -->
+  <script src="static/js/algorithms.js"></script>
+  <script src="static/js/sketch.js"></script>
+</body>
+</html>
